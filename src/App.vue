@@ -1,7 +1,29 @@
 <script setup lang="ts">
+  import { ref, computed } from "vue";
+  import MainPage from "./pages/Main-Page.vue";
+  import Blog from "./pages/Blog.vue";
+  import NotFound from "./pages/Not-Found.vue";
+  import HeaderCom from "./components/Header-Com.vue";
+
+  const routes: any = {
+    "/": MainPage,
+    "/blog": Blog,
+  }
+
+  const currentPath = ref(window.location.hash)
+
+  window.addEventListener('hashchange', () => {
+    currentPath.value = window.location.hash;
+  })
+
+  const currentView: any = computed(() => {
+    return routes[currentPath.value.slice(1) || "/"] || NotFound
+  })
 </script>
 
 <template>
+  <HeaderCom /> 
+  <component :is="currentView" />
 </template>
 
 <style scoped>
