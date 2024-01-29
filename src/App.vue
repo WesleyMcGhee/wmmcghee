@@ -24,9 +24,12 @@
 
 <template>
   <HeaderCom /> 
-  <component :is="currentView" />
+  <component class="page" :is="currentView" />
   <FooterCon />
 </template>
 
 <style scoped>
+  .page {
+    min-height: 73vh;
+  }
 </style>

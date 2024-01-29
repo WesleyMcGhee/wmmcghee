@@ -1,7 +1,7 @@
 <template>
   <section class="intro">
     <div class="intro-img">
-      <img class="headshot" alt="A Headshot of Me" src="../../public/gigachad.jpg" />
+      <img class="headshot" alt="A Headshot of Me" src="/gigachad.jpg" />
     </div>
     <div class="intro-text">
       <h1 class="heading">Wesley McGhee</h1>
@@ -15,7 +15,9 @@
 
 <style>
   .intro {
+    width: 80%;
     display: flex;
+    margin: 0 auto;
   }
   .intro-text {
     width: 50%;
@@ -49,7 +51,7 @@
     display: inline;
   }
   
-  @media(max-width: 830px) {
+  @media(max-width: 930px) {
     .intro {
       margin-top: 5vh;
       flex-direction: column;
@@ -57,8 +59,8 @@
     }
 
     .intro-text {
-      width: 80%;
       text-align: center;
+      width: 100%;
     }
   }
 </style>
