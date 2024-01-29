@@ -4,6 +4,7 @@
   import Blog from "./pages/Blog.vue";
   import NotFound from "./pages/Not-Found.vue";
   import HeaderCom from "./components/Header-Com.vue";
+  import FooterCon from "./components/Footer-con.vue";
 
   const routes: any = {
     "/": MainPage,
@@ -24,6 +25,7 @@
 <template>
   <HeaderCom /> 
   <component :is="currentView" />
+  <FooterCon />
 </template>
 
 <style scoped>
