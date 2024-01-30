@@ -11,8 +11,8 @@
       </ul>
     </div>
     <div class="footer-links">
-      <a class="socials-link" href="https://github.com/WesleyMcGhee"><v-icon scale="2" name="bi-github" /></a>
-      <a class="socials-link" href="https://www.linkedin.com/in/wesleymcghee/"><v-icon  scale="2" name="bi-linkedin" /></a>
+      <a class="socials-link" target="#" href="https://github.com/WesleyMcGhee"><v-icon scale="2" name="bi-github" /></a>
+      <a class="socials-link" target="#" href="https://www.linkedin.com/in/wesleymcghee/"><v-icon  scale="2" name="bi-linkedin" /></a>
       
     </div>
   </footer>

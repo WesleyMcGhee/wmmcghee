@@ -16,12 +16,15 @@
 <style>
   .intro {
     width: 80%;
+    padding: 5vh 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
   }
   .intro-text {
     width: 50%;
-    padding-left: 3vw;
     margin-top: 3vh;
   }
 
@@ -53,9 +56,7 @@
   
   @media(max-width: 930px) {
     .intro {
-      margin-top: 5vh;
-      flex-direction: column;
-      align-items: center;
+      width: 80%;
     }
 
     .intro-text {
