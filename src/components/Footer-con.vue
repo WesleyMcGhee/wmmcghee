@@ -11,8 +11,9 @@
       </ul>
     </div>
     <div class="footer-links">
-      <v-icon href="https://github.com/WesleyMcGhee" scale="2" name="bi-github" />
-      <v-icon href="https://www.linkedin.com/in/wesleymcghee/" scale="2" name="bi-linkedin" />
+      <a class="socials-link" href="https://github.com/WesleyMcGhee"><v-icon scale="2" name="bi-github" /></a>
+      <a class="socials-link" href="https://www.linkedin.com/in/wesleymcghee/"><v-icon  scale="2" name="bi-linkedin" /></a>
+      
     </div>
   </footer>
 </template>
@@ -59,8 +60,8 @@
   .footer-links {
     width: 10%;
   }
-
-  .footer-link-items {
-    color: white;
+  
+  .socials-link {
+    color: inherit;
   }
 </style>
