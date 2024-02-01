@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h1>Not Found</h1>
+  <img src="../../public/Yuri-goggles.webp" alt="Girl with Binoculars" />
 </template>
