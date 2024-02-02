@@ -1,15 +1,13 @@
 <template>
   <section class="contact-section">
-    <div class="contact-con">
-    <h1 class="contact-header">Contact Me</h1>
     <form class="contact-form">
-      <input class="half-input input" placeholder="First Name" />
-      <input class="half-input input" placeholder="Last Name" />
-      <input class="full-input input" placeholder="email" type="Email" />
+      <h1 class="contact-header">Contact Me</h1>
+      <input class="half-input input" placeholder="First Name" value="First Name" />
+      <input class="half-input input" placeholder="Last Name" value="Last Name" />
+      <input class="full-input input" placeholder="email" value="Email" />
       <textarea class="textarea input" placeholder="Message"></textarea>
-      <input class="contact-submit" type="submit" placeholder="Send!" />
+      <input class="contact-submit" type="submit" value="Send!" />
     </form>
-    </div>
   </section>
 </template>
 
@@ -17,7 +15,7 @@
   .contact-section {
     background-color: #cfcfcf;
     color: black;
-    height: 40vh;
+    height: 45vh;
     padding: 2.5vh 0;
   }
 
@@ -31,7 +29,7 @@
   }
 
   .contact-form {
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
   }
 
@@ -71,5 +69,15 @@
   .contact-submit:focus {
    background-color: #242424;
    color: white;
+  }
+
+  @media (max-width: 820px) {
+    .contact-section {
+      height: 53vh;
+    }
+
+    .half-input {
+      width: 92.5%;
+    }
   }
 </style>
