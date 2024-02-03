@@ -1,11 +1,55 @@
+<script lang="ts">
+  import axios from "axios";
+
+  interface IEmailData {
+    firstName?: string;
+    lastName?: string;
+    email: string;
+    message: string;
+  }
+
+  export default {
+    data() {
+      return {
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+        endpoint: import.meta.env.EMAIL_ENDPOINT,
+      }
+    },
+    methods: {
+      async handleSubmit() {
+        const data: IEmailData = {
+          firstName: this.firstName,
+          lastName: this.lastName,
+          email: this.email,
+          message: this.message,
+        }
+
+        console.log(this.endpoint);
+
+        await axios.post(this.endpoint, data).then(() => {
+          this.firstName = ""; 
+          this.lastName = ""; 
+          this.email = ""; 
+          this.message = ""; 
+        }).catch((err) => {
+          console.error(err)
+        });
+      }
+    }
+  }
+</script>
+
 <template>
   <section class="contact-section">
-    <form class="contact-form">
+    <form class="contact-form" @submit.prevent="handleSubmit">
       <h1 class="contact-header">Contact Me</h1>
-      <input class="half-input input" placeholder="First Name" value="First Name" />
-      <input class="half-input input" placeholder="Last Name" value="Last Name" />
-      <input class="full-input input" placeholder="email" value="Email" />
-      <textarea class="textarea input" placeholder="Message"></textarea>
+      <input class="half-input input" placeholder="First Name" v-model="firstName" />
+      <input class="half-input input" placeholder="Last Name" v-model="lastName" />
+      <input class="full-input input" placeholder="email" v-model="email" required />
+      <textarea class="textarea input" placeholder="Message" v-model="message" required></textarea>
       <input class="contact-submit" type="submit" value="Send!" />
     </form>
   </section>
@@ -66,10 +110,13 @@
     background-color: white;
   }
 
-  .contact-submit:focus {
+  .contact-submit:hover {
    background-color: #242424;
    color: white;
+   transition: .2s ease;
+   cursor: pointer;
   }
+
 
   @media (max-width: 820px) {
     .contact-section {
