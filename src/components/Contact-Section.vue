@@ -8,6 +8,7 @@
     message: string;
   }
 
+
   export default {
     data() {
       return {
@@ -15,7 +16,7 @@
         lastName: "",
         email: "",
         message: "",
-        endpoint: import.meta.env.EMAIL_ENDPOINT,
+        endpoint: import.meta.env.VITE_EMAIL_ENDPOINT,
       }
     },
     methods: {
